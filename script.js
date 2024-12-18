@@ -1559,8 +1559,8 @@ sceneTrash.appendChild(modelTrash);
       function renderPlacesMenu(placesMenu) {
         let sceneMenu = document.querySelector('a-camera');
           placesMenu.forEach((placeMenu) => {
-            // let latitudeMenu = placeMenu.location.lat;
-            // let longitudeMenu = placeMenu.location.lng;
+            let latitudeMenu = placeMenu.location.lat;
+            let longitudeMenu = placeMenu.location.lng;
               let modelMenu = document.createElement('a-entity');
       
       
@@ -1569,7 +1569,7 @@ sceneTrash.appendChild(modelTrash);
       
       
       
-            // modelMenu.setAttribute('gps-entity-place', `latitude: ${latitudeGate}; longitude: ${longitudeGate};`);
+            modelMenu.setAttribute('gps-entity-place', `latitude: ${latitudeMenu}; longitude: ${longitudeMenu};`);
             modelMenu.setAttribute('gltf-model', 'models/MenuIcon2.gltf');
             
             modelMenu.setAttribute('scale', '0.04 0.04 0.04');
@@ -1591,6 +1591,9 @@ sceneTrash.appendChild(modelTrash);
                document.getElementById("filters").style.display ="unset";
             
                   });
+
+              modelGate.setAttribute('collect-disappear', '');
+            modelGate.setAttribute('getCenterPoint', '');
 
 
             sceneMenu.appendChild(modelMenu);
