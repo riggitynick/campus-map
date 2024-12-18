@@ -1572,13 +1572,13 @@ sceneTrash.appendChild(modelTrash);
             modelMenu.setAttribute('gps-entity-place', `latitude: ${latitudeMenu}; longitude: ${longitudeMenu};`);
             modelMenu.setAttribute('gltf-model', 'models/MenuIcon2.gltf');
             
-            modelMenu.setAttribute('scale', '0.04 0.04 0.04');
+            modelMenu.setAttribute('scale', '0.04 0.04 0.34');
                  
             // modelMenu.setAttribute('animation', 'property: rotation; to: 0 360 0; loop:true; dur: 6000; easing: linear');
             modelMenu.setAttribute('static-body', '');
             modelMenu.addEventListener('loaded', () => {
            // window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
-           modelMenu.setAttribute('position', `0 -0.23 1;`);
+           modelMenu.setAttribute('position', `0 -0.23 -1;`);
        
             });
       
