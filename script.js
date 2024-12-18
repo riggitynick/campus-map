@@ -620,6 +620,10 @@ AFRAME.registerComponent('collect-disappear', {
             //       });
             //   }
             // });
+
+
+
+
         
         
           
@@ -1585,8 +1589,16 @@ sceneTrash.appendChild(modelTrash);
       
       //       });
        
-            modelMenu.setAttribute('collect-disappear', '');
+           
             modelMenu.setAttribute('getCenterPoint', '');
+
+
+            modelMenu.addEventListener('click', () => {
+             
+               document.getElementById("filters").style.display ="unset";
+            
+                  });
+
 
             sceneMenu.appendChild(modelMenu);
         });
