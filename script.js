@@ -1548,7 +1548,7 @@ sceneTrash.appendChild(modelTrash);
 
       function staticLoadPlacesMenu() {
         return [
-          {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
+          // {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
         
 
           
@@ -1559,8 +1559,8 @@ sceneTrash.appendChild(modelTrash);
       function renderPlacesMenu(placesMenu) {
         let sceneMenu = document.querySelector('a-camera');
           placesMenu.forEach((placeMenu) => {
-            let latitudeMenu = placeMenu.location.lat;
-            let longitudeMenu = placeMenu.location.lng;
+            // let latitudeMenu = placeMenu.location.lat;
+            // let longitudeMenu = placeMenu.location.lng;
               let modelMenu = document.createElement('a-entity');
       
       
@@ -1577,7 +1577,7 @@ sceneTrash.appendChild(modelTrash);
             // modelMenu.setAttribute('animation', 'property: rotation; to: 0 360 0; loop:true; dur: 6000; easing: linear');
             modelMenu.setAttribute('static-body', '');
             modelMenu.addEventListener('loaded', () => {
-           window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
+           // window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
            modelMenu.setAttribute('position', `0 -0.23 -0.8;`);
        
             });
