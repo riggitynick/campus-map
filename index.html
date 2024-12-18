@@ -1,0 +1,641 @@
+<html>
+<meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
+<meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+
+   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script>
+      THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+  </script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+ 
+  <script src="https://unpkg.com/super-hands@^2.1.0/dist/super-hands.min.js"></script> 
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script> 
+ 
+  <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+
+<!-- 
+   <script src="script.js">
+  </script> 
+    -->
+
+
+
+  <script>
+    AFRAME.registerComponent('change-color-on-hover', {
+    schema: {
+      color: {default: 'red'}
+    },
+
+    init: function () {
+      var data = this.data;
+      var el = this.el;  // <a-box>
+      // var defaultColor = el.getAttribute('material').color;
+
+      el.addEventListener('click', function () {
+        el.setAttribute('scale', '10 20 10');
+     console.log('this is change-color-on-hover');
+  
+      });
+
+     // el.addEventListener('mouseleave', function () {
+      //   el.setAttribute('color', defaultColor);
+      // });
+
+      // el.addEventListener('collide', function () {
+      //   el.setAttribute('color', data.color);
+
+    }
+  });
+
+
+
+  AFRAME.registerComponent('newPopup', {
+    schema: {
+      color: {default: 'red'}
+    },
+
+    init: function () {
+      var data = this.data;
+      var el = this.el;  // <a-box>
+      // var defaultColor = el.getAttribute('material').color;
+
+      el.addEventListener('click', function () {
+        newPopup.setAttribute('display', 'block');
+     console.log('this is newPopup');
+  
+      });
+
+     
+
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+  AFRAME.registerComponent('collect-remove', {
+   
+  
+   init: function () {
+    // var data = this.data;
+    // var el = this.el;  // <a-box>
+     // var defaultColor = el.getAttribute('material').color;
+
+     modelTrash.addEventListener('click', function () {
+       modelTrash.setAttribute('scale', '3 3 3');
+    
+     });
+
+   }
+ });
+
+
+
+//  AFRAME.registerComponent('make-dynamic', {
+   
+  
+//    init: function () {
+//     // var data = this.data;
+//     // var el = this.el;  // <a-box>
+//      // var defaultColor = el.getAttribute('material').color;
+
+    
+//        modelTrash.setAttribute('dynamic-body', '');
+    
+     
+
+//    }
+//  });
+
+
+
+</script>
+
+
+
+
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script> -->
+  
+  <!-- <script src="https://unpkg.com/aframe-aabb-collider-component@^2.2.1/dist/aframe-aabb-collider-component.min.js"></script> -->
+  
+
+  <!-- https://www.youtube.com/watch?v=SKYfYd3pk4I -->
+  
+  <!-- <script src="script.js">
+  </script>  -->
+ 
+
+
+
+<style>
+html.a-fullscreen .a-canvas {
+    position: relative!important;
+    z-index:10;
+    margin-top: 3px; 
+  }
+
+a-canvas{
+margin: 0; 
+} 
+
+a-scene{
+margin: 0;
+padding:0;
+}
+
+h1, h5{
+margin-top: 0;
+padding: 0;
+}
+
+h2{
+font-family: Arial, Helvetica, sans-serif;
+background-color: black;
+padding-bottom: .5em;
+font-size: 1.2em;
+}
+
+a{
+text-decoration: none;
+}
+
+a h3{
+color: rgb(252, 219, 76);
+}
+
+.img1{
+background-image: url(images/ShapeClickLogo.png);
+background-repeat: no-repeat;
+background-size: contain;
+height: 130px;
+width: 130px;
+margin: auto;
+margin-top: 5%;
+}
+
+.img2{
+background-image: url(images/closeSymbol.png);
+background-size: contain;
+height: 60px;
+width: 60px;
+margin: auto;
+margin-top:5%;
+}
+
+#splashscreen {
+font-family: Arial, Helvetica, sans-serif;
+ float: right;
+ margin: auto;
+ margin-top: 20px;
+  opacity: .85;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.closeSymbol{
+border: none;
+color: black;
+text-align: center;
+font-size: 5em;
+margin: auto;
+margin-top: 10%;
+width: 5%;
+height: 5%;  
+}
+
+#winPopup {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ margin-top: 20px;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#waterFeatPopup {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ margin-top: 20px;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#newPopup {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ margin-top: 20px;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+
+#clickme {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
+  padding-top: .5em;
+  border-radius: 4px;
+  opacity: .85;
+  background-color: black;
+  color: rgb(127, 58, 238);
+  text-align: center;
+  width: 100%;
+  height: 2em;
+}
+
+#filters {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* NEED TO FIX OVERLAY 
+
+If can get it to aling to bottom, i can add a background bar
+*/
+
+
+#filterButton{
+  margin:auto;
+  background-image: url(images/ShapeClickLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6em;
+  width: 8%;
+ 
+  /* overflow: auto; */
+  
+  border-radius: 50%;
+
+}
+
+.closingText{
+  font-size: 1.7em;
+  text-decoration: none;
+  color: rgb(12, 190, 6);
+  margin: auto;
+  width: fit-content;
+  border: 2px solid rgb(12, 190, 6);
+  padding: 2px;
+  }
+
+ </style>
+
+
+
+
+<body style="margin: 0; overflow:hidden; ">
+ 
+
+<!-- CREATES CANVAS AND SCENE ACCESSING DEVICE CAMERA -->
+  <a-canvas>
+  
+   
+  <a-scene vr-mode-ui="enabled: false" points physics="gravity: 0">
+   
+<!-- LOADS SPLASHSCREEN   -->
+ <div id="splashscreen">
+  
+  <div class="img1"></div>
+  <h3>Welcome to Loveland!<br>
+    Use this interactive AR map<br>
+    to find differnt points of interest<br>
+    and collect special items.<br>
+     <br>
+     <span style="color: rgb(231, 250, 65);"> Reach 10 points to win!</span><br>
+     <br>
+     </h3>
+      
+   
+   
+  <h4>To use this site correctly:<br>
+     -Use a <span style="color: rgb(65, 182, 250);">MOBILE</span> device such as a cell phone<br>
+     -Allow this site to access your <span style="color: green;">CAMERA</span><br>
+     
+   <!-- REMOVES SPLASHSCREEN -->
+     <div class="img2" id="enter_link" onclick="removeSplash()">
+          </div>
+         <!-- </a> -->
+              </h4>   
+ </div>
+
+
+
+
+
+ <!-- STATES THAT YOU WIN ONCE YOU REACH 20 POINTS -->
+ <div id="winPopup">
+  <br>
+  <br>
+  <br>
+  <h3>Thank you for playing!</h3>
+  <br>
+  <h1>YOU WIN!</h1>
+ 
+   
+   <div class="img2" onclick="removeWinPopup()"></div>
+   <br>
+   <br>
+   <br>
+   <br>
+  <h3>Close this popup to click more shapes,<br>
+  or click <a href="">HERE</a> to play again.
+</h3>
+</div>
+
+<!-- DISPLAYS SCORE -->
+ <div id="clickme">Score</div>
+
+
+<!--FILTERS-->
+<!--Popup for filters-->
+<div id="filters">
+  <br>
+  <br>
+  <br>
+  <h3>This is where the filters will be listed</h3>
+  <br>
+  <h1><span style="color: rgb(164, 220, 252);">Filter list</span></h1>
+
+<!-- Checkbox -->
+  <input type="checkbox" id="checkbox1" checked name="Building 1" value="Bike" onclick="filter1()">
+  <label for="Building 1"> For Green</label><br>
+
+  <!-- Checkbox 2 -->
+
+  <input type="checkbox" id="checkbox2" checked name="Buildings all" value="Bike" onclick="filter2()">
+  <label for="Buildings all"> For Purple and green</label><br>
+  
+  
+
+  <div class="img2" onclick="exit_filter_screen()">
+  </div>
+
+</div>
+
+<!--Button for Filters to popup-->
+
+
+<!-- <div id="filterButton" onclick="showFilters()"></div> -->
+
+
+
+
+
+
+<!--end of filters section-->
+
+
+
+ 
+ <!-- POP UP WARNING ABOUT WATER -->
+  <div id="waterFeatPopup">
+    <br>
+    <br>
+    <br>
+    <h3>WARNING!</h3>
+    <br>
+    <h1><span style="color: rgb(164, 220, 252);">WATER / ICE</span><br><br>IN THIS AREA!</h1>
+   
+     
+     <div class="img2" onclick="removeWaterFeatPopup()"></div>
+     <br>
+     <br>
+     <br>
+     <br>
+    <h3>Best to steer clear of danger.<br>
+      </h3>
+  </div>
+
+
+
+  <!--THIS IS THE FRAMEWORK FOR NEW POPUPS ON BUILDINGS-->
+   <div id="newPopup">
+    <br>
+    <br>
+    <br>
+    <h3>New Popup!</h3>
+    <br>
+    <h1><span style="color: rgb(164, 220, 252);">New popup</span><br><br>IN THIS AREA!</h1>
+   
+
+  </div>
+ 
+
+
+
+
+ <!-- <a-entity> -->
+ <a-camera position="0 10 0" scale="10 10 10" kinematic-body gps-camera rotation-reader look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" fov="47" near="0.5" far="12000" cursor="rayOrigin: mouse">
+
+
+  <!--THIS ACTS AS THE ICON TO CLICK FOR FILTERS, AT SOME POINT, I WILL MAKE A ROTATING #D MODEL ICON TO REPLACE IT-->
+  
+  <!-- <a-box position="0 -0.2 -0.8" scale="0.15 0.15 0.15" rotation="0 0 0" color="red" onclick="showFilters()" style="z-index: 100;" material="" geometry=""></a-box> -->
+
+<a-entity scale="0.05 0.05 0.05" gltf-model="url(/models/MenuIcon1.gltf)" position="0 -0.23 -0.8" onclick="showFilters()" rotation="90 0 0"></a-entity>
+
+
+  <a-box id="purpleBox" class="Building" position="0 0 -0.8" scale="0.05 0.05 0.05" rotation="0 0 0" color="purple"  style="z-index: 100;" material="" geometry=""></a-box>
+
+
+
+
+
+  <a-box id="greenBox" class="Building" position="0 -0.1 -0.8" scale="0.05 0.05 0.05" rotation="0 0 0" color="green"  style="z-index: 100;" material="" geometry=""></a-box>
+
+
+
+
+
+
+ <!-- when inside entity or on computer  :    position="10 30 0" -->
+
+
+ <!-- for phone  :    position="0 10 0" -->
+
+  <!-- <a-entity sphere-collider="objects: a-box" super-hands hand-controls="left"></a-entity>
+  <a-entity sphere-collider="objects: a-box" super-hands hand-controls="right"></a-entity>   
+  
+  hoverable grabbable stretchable draggable dropppable
+  
+  camera="active: true"         progressive-controls              cursor="rayOrigin: mouse"           position="0 2 2"      -->
+
+  <!-- <a-sphere color="blue" opacity="0"></a-sphere> -->
+
+<!-- 
+<a-entity gps-camera rotation-reader geometry="primitive: box" aabb-collider="objects: a-scene" look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" position="0 2 0" cursor="rayOrigin: mouse" fov="47" far="1000"></a-entity>   -->
+
+<!-- 
+<a-camera foo rotation-reader geometry="primitive: box" aabb-collider="objects: a-scene" look-controls="enabled: true; hmdEnabled: false; touchEnabled: false;" position="0 6 0" cursor="rayOrigin: mouse" fov="47" far="1000"></a-camera>   -->
+
+
+
+
+
+</a-camera >
+
+ <!-- </a-entity> -->
+
+ 
+
+
+  <!-- <a-dodecahedron id="filterButton" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  material='opacity: 0.5' color="white" scale="5 5 5" clickhandler2></a-dodecahedron>
+   -->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <a-entity scale="1 1 1" gltf-model="url(/models/dogParkTrash.gltf)" position="0 -0.5 -5" change-color-on-hover dynamic-body></a-entity> -->
+
+
+
+<!-- START OF PLACING SHAPES -->
+
+
+
+    
+<!--     THIRD LAYER TEAL  -->
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;" position="-4 5 7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-2 5 7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<!-- <a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="0 5 7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="2 5 7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 5" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 3" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 1" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 -1" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 -3" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 -5" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="4 5 -7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="2 5 -7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="0 5 -7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-2 5 -7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-4 5 -7" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-4 5 -5" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-4 5 -3" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-4 5 -1" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-4 5 1" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron>
+    
+<a-dodecahedron animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear;"  position="-4 5 3" material='opacity: 0.5' color="teal" scale=".5 .5 .5" clickhandler2></a-dodecahedron> -->
+    
+   
+
+
+
+<!-- <a-sphere color="blue" gps-entity-place="latitude: 39.7449715488114; longitude: -104.83740178596193" radius="5" change-color-on-hover="scale: 0.5 0.5 0" dynamic-body hoverable grabbable stretchable draggable droppable></a-sphere> -->
+
+<!-- <a-sphere color="blue" position="2 0 4"  gps-entity-place="latitude: 39.47693280279892; longitude: -105.08197347360039" radius="1" change-color-on-hover="scale: 5 5 5" dynamic-body></a-sphere> -->
+
+
+
+
+
+
+
+<!-- <a-box color="red" gps-entity-place="latitude: 39.47693280279892; longitude: -105.08197347360039" opacity="0.5" dynamic-body></a-box>
+
+
+
+<a-box color="red" gps-entity-place="latitude: 39.47691507372231; longitude: -105.0819406612887" opacity="0.5" dynamic-body></a-box>  -->
+
+<!-- ACCESS CAMERA, ALLOW ROTATION AND USE GYROSCOPE IN PHONE -->
+
+<!-- <a-camera>
+  <a-cursor></a-cursor>
+</a-camera> -->
+
+<!--THIS IS THE FRAMEWORK FOR NEW POPUPS ON BUILDINGS-->
+<a-sphere id="blueSphere" color="blue" position="2 0 4"  gps-entity-place="latitude: 39.47693280279892; longitude: -105.08197347360039" radius="1" onclick="newPopup()" dynamic-body></a-sphere>
+
+
+<a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 6000; easing: linear;" scale="60 60 60" gltf-model="url(/models/UWMadisonLogo.gltf)" position="0 20 0" gps-entity-place="latitude: 39.47693280279892; longitude: -105.08197347360039"></a-entity>
+
+
+
+<!-- </a-entity> -->
+
+
+<audio id="ringSound" src="./audio/Sonic - Rings.mp3"></audio>
+
+
+</a-scene>
+</a-canvas>
+
+
+<script src="script.js">
+</script>
+
+
+
+
+</body>
+</html>
