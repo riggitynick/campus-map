@@ -1548,7 +1548,7 @@ sceneTrash.appendChild(modelTrash);
 
       function staticLoadPlacesMenu() {
         return [
-          // {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
+          {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
         
 
           
