@@ -1592,8 +1592,8 @@ sceneTrash.appendChild(modelTrash);
             
                   });
 
-              modelGate.setAttribute('collect-disappear', '');
-            modelGate.setAttribute('getCenterPoint', '');
+              // modelMenu.setAttribute('collect-disappear', '');
+            modelMenu.setAttribute('getCenterPoint', '');
 
 
             sceneMenu.appendChild(modelMenu);
