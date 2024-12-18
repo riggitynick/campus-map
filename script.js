@@ -1583,14 +1583,7 @@ sceneTrash.appendChild(modelTrash);
             });
       
       
-      //  modelGate.addEventListener('click', () => {
-       
-      //    document.getElementById("gatePopup").style.display ="unset";
-      
-      //       });
-       
-           
-            modelMenu.setAttribute('getCenterPoint', '');
+    
 
 
             modelMenu.addEventListener('click', () => {
