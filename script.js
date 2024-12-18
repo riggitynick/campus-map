@@ -656,6 +656,7 @@ AFRAME.registerComponent('collect-disappear', {
         let placesRestroom = staticLoadPlacesRestroom();
         let placesShelter = staticLoadPlacesShelter();
         let placesGate = staticLoadPlacesGate();
+        let placesMenu = staticLoadPlacesMenu();
        //RENDER THOSE LOCATIONS
         // renderPlacesParking(placesParking);  
         renderPlacesTrash(placesTrash);
@@ -664,6 +665,7 @@ AFRAME.registerComponent('collect-disappear', {
          renderPlacesRestroom(placesRestroom);
          renderPlacesShelter(placesShelter);
          renderPlacesGate(placesGate);
+         renderPlacesMenu(placesMenu);
 
       };
       
@@ -1531,6 +1533,65 @@ sceneTrash.appendChild(modelTrash);
             sceneGate.appendChild(modelGate);
         });
        }
+
+
+
+
+
+
+ //MENU ICON
+
+
+      function staticLoadPlacesMenu() {
+        return [
+          {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
+        
+
+          
+               ];
+               }
+          
+      
+      function renderPlacesMenu(placesMenu) {
+        let sceneMenu = document.querySelector('a-camera');
+          placesMenu.forEach((placeMenu) => {
+            let latitudeMenu = placeMenu.location.lat;
+            let longitudeMenu = placeMenu.location.lng;
+              let modelMenu = document.createElement('a-entity');
+      
+      
+      
+             
+      
+      
+      
+            // modelMenu.setAttribute('gps-entity-place', `latitude: ${latitudeGate}; longitude: ${longitudeGate};`);
+            modelMenu.setAttribute('gltf-model', 'models/MenuIcon2.gltf');
+            
+            modelMenu.setAttribute('scale', '0.04 0.04 0.04');
+                 
+            // modelMenu.setAttribute('animation', 'property: rotation; to: 0 360 0; loop:true; dur: 6000; easing: linear');
+            modelMenu.setAttribute('static-body', '');
+            modelMenu.addEventListener('loaded', () => {
+           window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
+           modelMenu.setAttribute('position', `0 -0.23 -0.8;`);
+       
+            });
+      
+      
+      //  modelGate.addEventListener('click', () => {
+       
+      //    document.getElementById("gatePopup").style.display ="unset";
+      
+      //       });
+       
+            modelMenu.setAttribute('collect-disappear', '');
+            modelMenu.setAttribute('getCenterPoint', '');
+
+            sceneMenu.appendChild(modelMenu);
+        });
+       }
+
       
       
                 
@@ -1628,6 +1689,10 @@ function showFilters(){
 function exit_filter_screen(){
   document.getElementById("filters").style.display = "none";
 };
+
+// function addMenuIcon(){
+//   document.getElementById("menuIcon").setAttribute('gltf-model', 'models/MenuIcon2.gltf');
+// };
  
 
 //Checkbox filters
@@ -1701,6 +1766,6 @@ checkBox2.addEventListener("change", () => {
 
 
       
-      
+     
       
 
