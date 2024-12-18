@@ -1578,7 +1578,7 @@ sceneTrash.appendChild(modelTrash);
             modelMenu.setAttribute('static-body', '');
             modelMenu.addEventListener('loaded', () => {
            // window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
-           modelMenu.setAttribute('position', `0 -0.23 -0.8;`);
+           modelMenu.setAttribute('position', `0 -0.23 1;`);
        
             });
       
