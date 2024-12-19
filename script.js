@@ -680,77 +680,7 @@ AFRAME.registerComponent('collect-disappear', {
       function staticLoadPlacesParking() {
        return [
       
-      //  {location: {lat: 39.68070149733206,  lng:  -105.89699282464365},},  // Loveland parking lot
-      
-      // //at work near office
-      // //flag pole
-      // { location: {lat: 39.744414,lng: -104.837586,  }, },
-      // //childrens hosp
-      // { location: {lat: 39.742616,lng: -104.836166,  }, },
-      // //colfax ursula
-      // { location: {lat: 39.740027,lng: -104.83095,  }, },
-      
-      // { location: {lat: 39.476921,lng: -105.082274,  }, },
-      // { location: {lat: 39.476638,lng: -105.082994,  }, },
-      // { location: {lat: 39.476290,lng: -105.083595,  }, },
-      // { location: {lat: 39.475872,lng: -105.084223,  }, },
-      
-      
-      // {location: {lat: 39.484604,  lng: -105.074975,},},
-      //       {location: {lat: 39.484071, lng: -105.075172,},},
-      //       {location: {lat: 39.483723,  lng: -105.075175,},},
-      //       {location: {lat: 39.484170,  lng: -105.073804,},},
-      //       {location: {lat: 39.482957,  lng: -105.073747,},},
-      
-      
-      
-      
-      
-      //       {location: {lat: 39.724642, lng: -105.029859,},}, //Barnum
-      //       {location: {lat: 39.781798,  lng: -105.052153,},}, //Berkeley Lake Dog Park
-      //       {location: {lat: 39.889865,  lng: -104.963441,},}, //Bill Goodspeed Happy Tails Dog Park
-      //       {location: {lat: 39.927629,  lng: -105.009662,},}, // Big Dry Creek
-      //       {location: {lat: 39.938930, lng: -105.051636,},}, //Broomfield County Commons Dog Park
-      //       {location: {lat: 39.939354,  lng: -105.048791,},}, //Broomfield County Commons Dog Park
-      //       {location: {lat: 39.632838,  lng: -105.022999,},}, //Centennial Park Off Leash Dog Area
-      //       {location: {lat: 39.631679,  lng: -105.018935,},}, //Centennial Park Off Leash Dog Area
-      //       {location: {lat: 39.562679, lng: -105.050013,},}, //Chatfield State Park Off-Leash Dog Area
-      //       {location: {lat: 39.561548,  lng: -105.055608,},}, //Chatfield State Park Off-Leash Dog Area
-      //       {location: {lat: 39.614110,  lng: -104.816574,},}, //Cherry Creek State Park Dog Off-Leash Area (DOLA)
-      //       {location: {lat: 39.623590,  lng: -104.830858,},},  //Cherry Creek State Park Dog Off-Leash Area (DOLA)
-      //       {location: {lat: 39.978228, lng: -105.166165,},}, //Davidson Mesa Dog park
-      //       {location: {lat: 39.532895,  lng: -104.949383,},}, //Digger's Dog Park at Dad Clark
-      //       {location: {lat: 39.779243,  lng: -105.185402,},}, //Dog Park at Tony Grampsas
-      //        //Duncan Park Off Leash Dog Area HAS NONE LISTED
-      //        {location: {lat: 39.990776,  lng: -105.222762,},}, //East Boulder Dog Park
-      //        {location: {lat: 39.628128,  lng: -105.006261,},}, //Englewood Canine Corral
-      //        {location: {lat:  39.534743,  lng: -104.994402,},}, //Fido's Field at Foothill Park
-      //        //First Creek Farm Small Dog Park HAS NONE LISTED
-      //        {location: {lat: 39.680500,  lng: -105.169244,},}, //Forsberg - Iron Spring Dog Park
-      //        //-Fuller Dog Park HAS NONE LISTED
-      //        {location: {lat: 39.491347,  lng: -104.870525,},}, //Glendale Farm Open Space Dog Park
-      //        {location: {lat: 39.638302,  lng: -104.785430,},}, //Grandview Dog Park
-      //        {location: {lat: 39.779144,  lng: -104.749837,},}, //Green Valley Ranch East Off Leash Area
-      //        {location: {lat: 39.968206,  lng: 39.968206,},}, //Happy Tails Dog Park
-      //        {location: {lat: 39.538156,  lng: -104.917197,},}, //Hound Hill Dog Park at Heritage Regional Park
-      //        //Howard Heuston Off Leash Dog Area HAS NONE LISTED
-      //        {location: {lat: 39.639773,  lng: -104.999578,},}, //Jackson dog park
-      //        {location: {lat: 39.649790,  lng: -104.874215,},}, //Kennedy dog park
-      //        {location: {lat: 39.970736,  lng: -105.131181,},}, //Louisville Dog Park
-      //        {location: {lat: 39.720318,  lng: -104.884929,},}, //Lowry Dog Park
-      //        //Northwest Greenbelt Off Leash Area HAS NONE LISTED
-      //        {location: {lat: 39.758273,  lng: -105.001841,},}, //Railyard Dog Park
-      //        {location: {lat: 39.546678,  lng: -105.023277,},}, //Rovers run dog park
-      //        {location: {lat: 39.748689,  lng: -104.897831,},}, //Stapleton Dog Park
-      //        {location: {lat: 40.004360,  lng: -105.074700,},}, //The Great Bark Dog Park
-      //        {location: {lat: 40.029655,  lng: -105.230795,},}, //Valmont Dog Park
-      //        {location: {lat: 39.816401,  lng: -105.203061,},}, //West Arvada Dog Park
-      //        {location: {lat: 39.878435,  lng: -105.132384,},}, //Westminster Hills Off Leash Dog Park
-      //        {location: {lat: 39.612074,  lng: -105.036799,},}, //Wynetka Ponds Dog Park
-      
-      
-      // //500
-      //        {location: {lat: 39.745596,  lng: -104.837683,},},
+   
       //       // home
              {location: {lat: 39.476687,  lng: -105.081950 ,},},
       
@@ -832,113 +762,16 @@ AFRAME.registerComponent('collect-disappear', {
       function staticLoadPlacesTrash() {
        
         return [
-            // {location: {lat: 39.484604,  lng: -105.074975,},},
-            // {location: {lat: 39.484071, lng: -105.075172,},},
-            // {location: {lat: 39.483723,  lng: -105.075175,},},
-            // {location: {lat: 39.484170,  lng: -105.073804,},},
-            // {location: {lat: 39.482957,  lng: -105.073747,},},
-      
- 
-
-      //home
-      //  {location: {lat: 39.477062,  lng: -105.081663,},},
-      //  {location: {lat: 39.476847,  lng: -105.081652,},},
-      //  {location: {lat: 39.476857,  lng: -105.081657,},},
-      // {location: {lat: 39.476720564669364,  lng: -105.08175373123294,},},
-      // {location: {lat: 39.745279808923684, lng: -104.83717304103573,},},
-      // {location: {lat: 39.7449715488114,  lng: -104.83740178596193,},},
-     
-
-      //drive to safeway from house
-      // {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
-      // {location: {lat: 39.47740677166334,  lng:  -105.08203418739164},},
-      // {location: {lat: 39.47779330376479,  lng:  -105.08203578434234},},
-      // {location: {lat: 39.47787454993185,  lng:  -105.08154936468364},},
-      // {location: {lat: 39.47769728590449,  lng:  -105.08117936762049},},
-      // {location: {lat: 39.477197501733514,  lng:  -105.08120647982506},},
-      // {location: {lat: 39.47653029691424,  lng:  -105.08115225801308},},
-      // {location: {lat: 39.47662262299216,  lng:  -105.08063713269647},},
-      // {location: {lat: 39.47737845919897,  lng:  -105.08076790682622},},
-      // {location: {lat: 39.47804565670487,  lng:  -105.08056695981627},},
-      // {location: {lat: 39.478584826058324,  lng:  -105.07989873275142},},
-      // {location: {lat: 39.47885317597892,  lng:  -105.07865956121518},},
-      // {location: {lat: 39.47885564015799,  lng:  -105.07783983030848},},
-      // {location: {lat: 39.478682071840296,  lng:  -105.07693557188841},},
-      // {location: {lat: 39.47839156211174,  lng:  -105.0760392872758},},
-      // {location: {lat: 39.47807396826054,  lng:  -105.07467731742783},},
-      // {location: {lat: 39.47804688731291,  lng:  -105.07345090629434},},
-      // {location: {lat: 39.478641450725526,  lng:  -105.0731622449308},},
-      // {location: {lat: 39.479211390102876,  lng:  -105.07331534676418},},
-      // {location: {lat: 39.47932956229957,  lng:  -105.07317500334345},},
-      // {location: {lat: 39.47990934356312,  lng:  -105.07331215746187},},
-      // {location: {lat: 39.4804349580648,  lng:  -105.0731750033389},},
-      // {location: {lat: 39.48114274704807,  lng:  -105.073312157028},},
-      // {location: {lat: 39.4818160625198,  lng:  -105.0731638403681},},
-      // {location: {lat: 39.482432750377576,  lng:  -105.07330737343108},},
-      // {location: {lat: 39.4832266811384,  lng:  -105.07317181396009},},
-      // {location: {lat: 39.48392090204032,  lng:  -105.07331853635057},},
-      // {location: {lat: 39.48425816206395,  lng:  -105.07319892573274},},
-      // {location: {lat: 39.48498437539287,  lng:  -105.07330258735585},},
-      // {location: {lat: 39.48534255505724,  lng:  -105.07317340833953},},
-      // {location: {lat: 39.483526688142824,  lng:  -105.07497439572965},},
-       
+                  
 
 //Loveland
 
 {location: {lat: 39.68032690012029,  lng:  -105.89797516967572},},    //chair2
 
-{location: {lat: 39.681125045311944,  lng:  -105.89729898292293},},  // food/bar
-{location: {lat: 39.67346363905745,  lng:  -105.9263035029257},},  // top of Chair 9
-{location: {lat: 39.688567292333246,  lng:  -105.91055786712319 },},  //top of chair 8
-{location: {lat: 39.66744785576243,  lng:  -105.90673229311689},},  //top of chair 6
-{location: {lat: 39.673445469188174,  lng:  -105.89650196316897},},  // top of chair 1
-{location: {lat: 39.7444521777652,  lng:  -104.83877247670215},},
-
-                    //Chair 2
-
-                    {location: {lat: 39.67836138418121,  lng:  -105.90089655450475},},
-                    {location: {lat: 39.67760116178889,  lng:  -105.90203986881403},},
-                    {location: {lat: 39.6771791364856,  lng:  -105.90265430762763},},
-                    {location: {lat: 39.676481755100674,  lng:  -105.9036887369187},},
-                    {location: {lat: 39.675781367397796,  lng:  -105.90472317006176},},
-                    {location: {lat: 39.675365324483025,  lng:  -105.90532204535994},},
-                    {location: {lat: 39.67507199390096,  lng:  -105.90573815672134},},
-                    {location: {lat: 39.67444001538834,  lng:  -105.90669148980523},},
-                    {location: {lat: 39.673729552708814,  lng:  -105.9076899761623},},
-                    {location: {lat: 39.673094226477986,  lng:  -105.90860416290862},},
-                    {location: {lat: 39.672421320429244,  lng:  -105.90956272092947},},
-                    {location: {lat: 39.671663013800924,  lng:  -105.91069878877829},},
-                    {location: {lat: 39.6705016267279,  lng:  -105.91235406705798},},
 
 
 
-//Mom's house
 
-{location: {lat: 42.7790852772978, lng: -89.30102827967337  },},
-{location: {lat: 42.77907346797482, lng: -89.30028261262501 },},
-{location: {lat: 42.77907740421812, lng: -89.29960668446579 },},
-{location: {lat: 42.77877815657607, lng: -89.29918825753333 },},
-{location: {lat: 42.77848284921689, lng: -89.29919362681336 },},
-{location: {lat: 42.777990670290066, lng: -89.29917754135133 },},
-{location: {lat: 42.77780955155296, lng: -89.29963351811278 },},
-{location: {lat: 42.77780955278626, lng: -89.30019141536265 },},
-{location: {lat: 42.77779773868141, lng: -89.30080295648823 },},
-{location: {lat: 42.778075200107274, lng: -89.30121363687391 },},
-{location: {lat: 42.778429568193694, lng: -89.30126192351594 },},
-{location: {lat: 42.77883512351902,  lng: -89.30126193154248 },},
-
-//Zachs house milton
-
-{location: {lat: 42.78208092489371,  lng: -88.96234782062457 },},
-{location: {lat: 42.78187520577049,  lng: -88.96178723765507 },},
-{location: {lat: 42.781556487074205,  lng: -88.9620067130236 },},
-{location: {lat: 42.78133403517076,  lng: -88.96217301515348 },},
-{location: {lat: 42.7810741796072,  lng: -88.96235540962081 },},
-{location: {lat: 42.780753296884235,  lng: -88.96256730710286 },},
-{location: {lat: 42.78077101646239,  lng: -88.96331563789684 },},
-{location: {lat: 42.78111158659394,  lng: -88.96306887559925 },},
-{location: {lat: 42.781391129243964,  lng: -88.96286770865089 },},
-{location: {lat: 42.78172972990168,  lng: -88.96262094120564 },},
 
 
 
@@ -1030,22 +863,6 @@ AFRAME.registerComponent('collect-disappear', {
 
 
 
-
-       //  bBox3 = modelTrash;
-          // var geometry = mesh.geometry;
-        //  var geometry = modelTrash;
-
-          // Box3.setFromObject();
-          // Box3.getCenter();
-
-         // modelTrash.setFromObject();
-          // modelTrash.getCenter();
-
-        //  geometry.computeBoundingBox();
-
-         // var center = new THREE.Vector3(a-canvas);
-          // modelTrash.getCenter(center);  
-         // modelTrash.getCenter(center);   
 
 
 
@@ -1152,28 +969,7 @@ sceneTrash.appendChild(modelTrash);
       //THE WATER FEATURE LOCATIONS
       function staticLoadPlacesWaterFeat() {
         return [
-          //  {location: {lat: 39.68500482272045, lng: -105.90063025462311,},},  //Loveland pond
-
-            {location: {lat: 39.484071, lng: -105.075172,},},
-            {location: {lat: 39.483723,  lng: -105.075175,},},
-            {location: {lat: 39.484170,  lng: -105.073804,},},
-            {location: {lat: 39.482957,  lng: -105.073747,},},
-            {location: {lat: 39.4767227736905,  lng:  -105.08185386668289,},},
-            {location: {lat: 39.476721738566425,  lng:  -105.08171171004454},},
-      
-            {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
-      {location: {lat: 39.47740677166334,  lng:  -105.08203418739164},},
-      {location: {lat: 39.47779330376479,  lng:  -105.08203578434234},},
-      {location: {lat: 39.47787454993185,  lng:  -105.08154936468364},},
-          
-
-      // LOVELAND WATER/ICE
-      {location: {lat: 39.68268093164536,  lng:  -105.91523929115867},},
-      {location: {lat: 39.6885900233185,  lng:  -105.91473287344986},},
-      {location: {lat: 39.689541084716126,  lng:  -105.91244337588294},},
-
-
-
+        
 // JANESVILLE BRIAR CREST
 {location: {lat: 42.72652189433353,  lng:   -88.98137987068479},},
 {location: {lat: 42.72614710822972,  lng:   -88.98136090663259},},
@@ -1244,13 +1040,7 @@ sceneTrash.appendChild(modelTrash);
         return [
             {location: {lat: 39.484604,  lng: -105.074975,},},
             {location: {lat: 39.484071, lng: -105.075172,},},
-            {location: {lat: 39.483723,  lng: -105.075175,},},
-            {location: {lat: 39.484170,  lng: -105.073804,},},
-            {location: {lat: 39.482957,  lng: -105.073747,},},
-
-            {location: {lat: 39.683518515527645,  lng: -105.90450593707143,},}, //Loveland trees
-            {location: {lat: 39.6840354878335,  lng: -105.90063779895772,},},
-            {location: {lat: 39.68500482272045,  lng: -105.90063025462311,},},
+   
       
       
            //500
@@ -1310,26 +1100,7 @@ sceneTrash.appendChild(modelTrash);
         return [
             {location: {lat: 39.484604,  lng: -105.074975,},},
             {location: {lat: 39.484071, lng: -105.075172,},},
-            {location: {lat: 39.483723,  lng: -105.075175,},},
-            {location: {lat: 39.484170,  lng: -105.073804,},},
-            {location: {lat: 39.482957,  lng: -105.073747,},},
-      
-      
-            {location: {lat: 39.68085933556013,  lng:  -105.89695989382288},}, // Loveland bathroom
-            
-             
-             {location: {lat: 39.745054,  lng: -104.838536,},},  //500
-             //home
-             {location: {lat: 39.476832,  lng: -105.082243,},},
-             {location: {lat: 39.476976, lng: -105.082215,},},
-      
-             //500
-      {location: {lat: 39.745054,  lng: -104.838536,},},
-      //home
-      {location: {lat: 39.476832,  lng: -105.082243,},},
-      {location: {lat: 39.476976, lng: -105.082215,},},
-      {location: {lat: 39.476966609316634,  lng: -105.08184714200644,},},
-      {location: {lat: 39.47687771683653, lng: -105.08182687340062,},},
+          
       
                ];
                }
@@ -1386,21 +1157,7 @@ sceneTrash.appendChild(modelTrash);
         return [
             {location: {lat: 39.484604,  lng: -105.074975,},},
             {location: {lat: 39.484071, lng: -105.075172,},},
-            {location: {lat: 39.483723,  lng: -105.075175,},},
-            {location: {lat: 39.484170,  lng: -105.073804,},},
-            {location: {lat: 39.482957,  lng: -105.073747,},},
-      
-     
-      
-      {location: {lat: 39.745409,  lng: -104.838315,},}, //500
-      //home
-      {location: {lat: 39.477626,  lng: -105.082341,},},
-      {location: {lat: 39.477607,  lng: -105.081412,},},
-      //500
-      {location: {lat: 39.745409,  lng: -104.838315,},},
-      //home
-      {location: {lat: 39.477626,  lng: -105.082341,},},
-      {location: {lat: 39.477607,  lng: -105.081412,},},
+         
       
                ];
                }
@@ -1456,39 +1213,7 @@ sceneTrash.appendChild(modelTrash);
         return [
           {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
           {location: {lat: 39.47740677166334,  lng:  -105.08203418739164},},
-          {location: {lat: 39.47779330376479,  lng:  -105.08203578434234},},
-          {location: {lat: 39.47787454993185,  lng:  -105.08154936468364},},
-          {location: {lat: 39.47769728590449,  lng:  -105.08117936762049},},
-          {location: {lat: 39.477197501733514,  lng:  -105.08120647982506},},
-          {location: {lat: 39.47653029691424,  lng:  -105.08115225801308},},
-          {location: {lat: 39.47662262299216,  lng:  -105.08063713269647},},
-          {location: {lat: 39.47737845919897,  lng:  -105.08076790682622},},
-          {location: {lat: 39.47804565670487,  lng:  -105.08056695981627},},
-          {location: {lat: 39.478584826058324,  lng:  -105.07989873275142},},
-          {location: {lat: 39.47885317597892,  lng:  -105.07865956121518},},
-          {location: {lat: 39.47885564015799,  lng:  -105.07783983030848},},
-          {location: {lat: 39.478682071840296,  lng:  -105.07693557188841},},
-          {location: {lat: 39.47839156211174,  lng:  -105.0760392872758},},
-          {location: {lat: 39.47807396826054,  lng:  -105.07467731742783},},
-          {location: {lat: 39.47804688731291,  lng:  -105.07345090629434},},
-          {location: {lat: 39.478641450725526,  lng:  -105.0731622449308},},
-          {location: {lat: 39.479211390102876,  lng:  -105.07331534676418},},
-          {location: {lat: 39.47932956229957,  lng:  -105.07317500334345},},
-          {location: {lat: 39.47990934356312,  lng:  -105.07331215746187},},
-          {location: {lat: 39.4804349580648,  lng:  -105.0731750033389},},
-          {location: {lat: 39.48114274704807,  lng:  -105.073312157028},},
-          {location: {lat: 39.4818160625198,  lng:  -105.0731638403681},},
-          {location: {lat: 39.482432750377576,  lng:  -105.07330737343108},},
-          {location: {lat: 39.4832266811384,  lng:  -105.07317181396009},},
-          {location: {lat: 39.48392090204032,  lng:  -105.07331853635057},},
-          {location: {lat: 39.48425816206395,  lng:  -105.07319892573274},},
-          {location: {lat: 39.48498437539287,  lng:  -105.07330258735585},},
-          {location: {lat: 39.48534255505724,  lng:  -105.07317340833953},},
-          {location: {lat: 39.483526688142824,  lng:  -105.07497439572965},},
-
-
-          {location: {lat: 39.47692430018184,  lng:  -105.08176662647963},},
-          {location: {lat: 39.47689324504697,  lng:  -105.08180417750458},},
+         
 
           
                ];
@@ -1569,16 +1294,17 @@ sceneTrash.appendChild(modelTrash);
       
       
       
-            modelMenu.setAttribute('gps-entity-place', `latitude: ${latitudeMenu}; longitude: ${longitudeMenu};`);
+            // modelMenu.setAttribute('gps-entity-place', `latitude: ${latitudeGate}; longitude: ${longitudeGate};`);
             modelMenu.setAttribute('gltf-model', 'models/MenuIcon2.gltf');
             
-            modelMenu.setAttribute('scale', '0.04 0.04 0.34');
+            modelMenu.setAttribute('scale', '0.04 0.04 0.04');
                  
             // modelMenu.setAttribute('animation', 'property: rotation; to: 0 360 0; loop:true; dur: 6000; easing: linear');
             modelMenu.setAttribute('static-body', '');
             modelMenu.addEventListener('loaded', () => {
-           // window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
-           modelMenu.setAttribute('position', `0 -0.23 -1;`);
+           window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
+           modelMenu.setAttribute('position', `0 -0.23 -0.8;`);
+           modelMenu.setAttribute('z-index', `100`);
        
             });
       
@@ -1591,9 +1317,6 @@ sceneTrash.appendChild(modelTrash);
                document.getElementById("filters").style.display ="unset";
             
                   });
-
-              // modelMenu.setAttribute('collect-disappear', '');
-            modelMenu.setAttribute('getCenterPoint', '');
 
 
             sceneMenu.appendChild(modelMenu);
