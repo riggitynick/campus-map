@@ -1157,7 +1157,12 @@ sceneTrash.appendChild(modelTrash);
         return [
             {location: {lat: 39.484604,  lng: -105.074975,},},
             {location: {lat: 39.484071, lng: -105.075172,},},
-         
+
+            //Janesville
+
+            {location: {lat: 39.484604,  lng: -105.074975,},},
+            {location: {lat: 42.72650896969287, lng: -88.98148353704758,},},
+            
       
                ];
                }
@@ -1273,9 +1278,9 @@ sceneTrash.appendChild(modelTrash);
 
       function staticLoadPlacesMenu() {
         return [
-          {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
+          // {location: {lat: 39.477122410343625,  lng:  -105.08203099873181},},
         
-
+          {position: {x: 0, y: -0.23, z: -0.8}},
           
                ];
                }
@@ -1284,8 +1289,8 @@ sceneTrash.appendChild(modelTrash);
       function renderPlacesMenu(placesMenu) {
         let sceneMenu = document.querySelector('a-camera');
           placesMenu.forEach((placeMenu) => {
-            let latitudeMenu = placeMenu.location.lat;
-            let longitudeMenu = placeMenu.location.lng;
+            // let latitudeMenu = placeMenu.location.lat;
+            // let longitudeMenu = placeMenu.location.lng;
               let modelMenu = document.createElement('a-entity');
       
       
@@ -1305,6 +1310,7 @@ sceneTrash.appendChild(modelTrash);
            window.dispatchEvent(new CustomEvent('gps-entity-place-loadedMenu'))
            modelMenu.setAttribute('position', `0 -0.23 -0.8;`);
            modelMenu.setAttribute('z-index', `100`);
+           modelMenu.setAttribute('opacity', `100`);
        
             });
       
