@@ -1,4 +1,6 @@
 
+// import * as THREE from 'three';
+
 ////////////////// LITERALLY JUST ADDED THIS TO REMOVE A CONSOLE ERROR
 // const user = document.querySelector("a-camera");
 // const center = new THREE.Vector3();
