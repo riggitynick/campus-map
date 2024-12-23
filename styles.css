@@ -1,0 +1,175 @@
+html.a-fullscreen .a-canvas {
+    position: relative!important;
+    z-index:10;
+    margin-top: 3px; 
+  }
+
+a-canvas{
+margin: 0; 
+} 
+
+a-scene{
+margin: 0;
+padding:0;
+}
+
+h1, h5{
+margin-top: 0;
+padding: 0;
+}
+
+h2{
+font-family: Arial, Helvetica, sans-serif;
+background-color: black;
+padding-bottom: .5em;
+font-size: 1.2em;
+}
+
+a{
+text-decoration: none;
+}
+
+a h3{
+color: rgb(252, 219, 76);
+}
+
+.img1{
+background-image: url(images/ShapeClickLogo.png);
+background-repeat: no-repeat;
+background-size: contain;
+height: 130px;
+width: 130px;
+margin: auto;
+margin-top: 5%;
+}
+
+.img2{
+background-image: url(images/closeSymbol.png);
+background-size: contain;
+height: 60px;
+width: 60px;
+margin: auto;
+margin-top:5%;
+}
+
+#splashscreen {
+font-family: Arial, Helvetica, sans-serif;
+ float: right;
+ margin: auto;
+ margin-top: 20px;
+  opacity: .85;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.closeSymbol{
+border: none;
+color: black;
+text-align: center;
+font-size: 5em;
+margin: auto;
+margin-top: 10%;
+width: 5%;
+height: 5%;  
+}
+
+#winPopup {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ margin-top: 20px;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#waterFeatPopup {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ margin-top: 20px;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#newPopup {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ margin-top: 20px;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+#clickme {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 0;
+  padding-top: .5em;
+  border-radius: 4px;
+  opacity: .85;
+  background-color: black;
+  color: rgb(127, 58, 238);
+  text-align: center;
+  width: 100%;
+  height: 2em;
+}
+
+#filters {
+display: none;
+font-family: Arial, Helvetica, sans-serif;
+float: right;
+ margin: auto;
+ opacity: .85;
+ background-color: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* NEED TO FIX OVERLAY 
+
+If can get it to aling to bottom, i can add a background bar
+*/
+
+
+#filterButton{
+  margin:auto;
+  background-image: url(images/ShapeClickLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6em;
+  width: 8%;
+ 
+  /* overflow: auto; */
+  
+  border-radius: 50%;
+
+}
+
+.closingText{
+  font-size: 1.7em;
+  text-decoration: none;
+  color: rgb(12, 190, 6);
+  margin: auto;
+  width: fit-content;
+  border: 2px solid rgb(12, 190, 6);
+  padding: 2px;
+  }
